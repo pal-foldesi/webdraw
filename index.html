@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf-8'>
+  <title>Webdraw</title>
+  <link rel='stylesheet' href='./style.css'>
+</head>
+
+<body>
+  <div id='controls'>
+    <input type='range' id='length-slider' name='length-slider' min='20' max='55' value='50' step='5'>
+    <label for='length-slider'>Length</label>
+    <button type='button' id='reset-length-button' name='reset-length-button'>Reset</button>
+    <input type='range' id='degrees-slider' name='degrees-slider' min='-45' max='45' value='25'>
+    <label for='degrees-slider'>Angle</label>
+    <button type='button' id='reset-degrees-button' name='reset-degrees-button'>Reset</button>
+    <input type='range' id='generations-slider' name='generations-slider' min='1' max='3' value='2'>
+    <label for='generations-slider'>Generations</label>
+    <button type='button' id='reset-generations-button' name='reset-generations-button'>Reset</button>
+    <button type='button' id='reset-all-controls-button' name='reset-all-controls-button'>Reset All</button>
+    <div>Commands:</div>
+    <div>
+      <ul>
+        <li>F (draw line)</li>
+        <li>+ (rotate right)</li>
+        <li>[ (save position)</li>
+      </ul>
+    </div>
+    <div>
+      <ul>
+        <li>G (skip line)</li>
+        <li>- (rotate left)</li>
+        <li>] (restore position)</li>
+      </ul>
+    </div>
+    <div>With each generation, F is replaced with...</div>
+    <div></div>
+    <div>Presets:</div>
+    <textarea id='successor-field' name='successor-field' rows='5' cols='40'>test</textarea>
+    <div></div>
+    <select name='preset-select' id='preset-select' size='5'>
+    </select>
+    <button type='button' id='copy-to-clipboard-button' name='copy-to-clipboard-button'>Copy to Clipboard</button>
+    <div id='copy-to-clipboard-notification' name='copy-to-clipboard-notification' hidden></div>
+    <button type='button' id='save-as-image-button' name='save-as-image-button'>Save as image</button>
+  </div>
+  <div id='attribution' name='attribution'>
+    <p>
+      Based on <a href='https://natureofcode.com/book/chapter-8-fractals/#chapter08_section6'>an example</a> from <a
+        href='https://natureofcode.com/book/chapter-8-fractals/'>chapter 8</a> of
+      the book <a href='https://natureofcode.com/book/'>The Nature of Code</a> by Daniel Shiffman</a>.
+    </p>
+    <p>
+      Uses the <a href='https://developer.mozilla.org/en-US/docs/Web/API/Canvas'>Canvas</a> and
+      <a href='https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API'>Clipboard</a> APIs and <a
+        href='https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout'>CSS Grid Layout</a>.
+    </p>
+  </div>
+  <canvas id='canvas'></canvas>
+  <script src='./webdraw.js'></script>
+</body>
+
+</html>

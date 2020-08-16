@@ -1,0 +1,39 @@
+html, body {
+  /*vertical scrollbar appears at 100%*/
+  height: 99%;
+}
+
+#controls {
+  position: fixed;
+  display: grid;
+  grid-template-columns: 170px 150px 160px;
+  grid-template-rows: 30px 30px 30px 40px 80px 60px 100px 30px;
+  justify-items: baseline;
+  align-items: center;
+}
+
+#reset-all-controls-button {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+#copy-to-cipboard-button {
+  grid-row-start: 7;
+  grid-row-end: 8;
+}
+
+#save-as-image-button {
+  grid-row-start: 8;
+  grid-row-end: 9;
+}
+
+#attribution {
+  position: absolute;
+  right: 20px;
+  width: 200px;
+  text-align: right;
+}
+
+ul {
+  padding-inline-start: 0px;
+}

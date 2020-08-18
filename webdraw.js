@@ -304,7 +304,7 @@ const setupCanvas = () => {
 
 setupCanvas()
 
-const context = canvas.getContext('2d')
+const context = canvas.getContext('2d', { alpha: false })
 
 window.addEventListener('resize', () => {
   setupCanvas()
